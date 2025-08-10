@@ -2,7 +2,7 @@
 
 A complete Laravel-based SaaS platform with isolated database multi-tenancy, featuring a comprehensive onboarding flow for new tenants.
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 This platform implements a three-environment architecture:
 
@@ -12,36 +12,36 @@ This platform implements a three-environment architecture:
 - **Features**: Multi-step onboarding flow, tenant provisioning
 
 
-## 🚀 Features Implemented
+##  Features Implemented
 
-### ✅ Onboarding Flow (5 Steps)
+###  Onboarding Flow (5 Steps)
 1. **Account Information**: Collect user name and email
 2. **Password Setup**: Secure password creation with validation
 3. **Company Details**: Company name and subdomain reservation
 4. **Billing Information**: Billing address and contact details
 5. **Confirmation**: Review and trigger tenant provisioning
 
-### ✅ Multi-Tenancy Features
+###  Multi-Tenancy Features
 - **Isolated Database Model**: Each tenant has its own database
 - **Subdomain Resolution**: Automatic tenant detection via subdomain
 - **Dynamic Database Configuration**: Runtime database connection switching
 - **Tenant Provisioning**: Automated workspace creation via queues
 
-### ✅ Security & Validation
+###  Security & Validation
 - **Email Uniqueness**: Global email validation across all tenants
 - **Subdomain Validation**: Reserved keyword protection
 - **Password Security**: Strong password requirements
 - **Session Management**: Secure token-based onboarding sessions
 
-### ✅ Queue System
+###  Queue System
 - **Background Processing**: Tenant provisioning via Laravel queues
 - **Retry Logic**: Failed provisioning with automatic retries
 - **Status Tracking**: Real-time provisioning status updates
-## 🎥 Demo Video
+##  Demo Video
 
 Watch the complete onboarding and multi-tenant setup demo here:  
 [▶ Click to Watch on Loom](https://www.loom.com/share/6b042bdd29c64643950e12a4c6b78754)
-## 📁 Project Structure
+##  Project Structure
 
 ```
 assesment/
@@ -72,7 +72,7 @@ assesment/
     └── web.php                             # Environment-specific routes
 ```
 
-## 🛠️ Installation & Setup
+##  Installation & Setup
 
 ### 1. Install Dependencies
 ```bash
@@ -114,7 +114,7 @@ Add to your local hosts file (`/etc/hosts` on Linux/Mac, `C:\Windows\System32\dr
 php artisan queue:work
 ```
 
-## 🎯 Usage Guide
+##  Usage Guide
 
 ### Root Environment (Onboarding)
 1. Visit `https://myapp.test`
@@ -123,7 +123,7 @@ php artisan queue:work
 4. Tenant will be provisioned automatically
 
 
-## 🔧 Key Components
+##  Key Components
 
 ### OnboardingController
 Handles the complete 5-step onboarding flow with:
@@ -146,13 +146,13 @@ Automatically:
 - Configures tenant-specific database connection
 - Handles tenant context switching
 
-## 🧪 Testing the Implementation
+##  Testing the Implementation
 
 ### 1. Test Onboarding Flow
 ```bash
 # Visit onboarding
 http://appcrates.myapp.test/
-## 🔒 Security Features
+##  Security Features
 
 - **Email Validation**: Global uniqueness across all tenants
 - **Subdomain Protection**: Reserved keyword blocking
@@ -160,7 +160,7 @@ http://appcrates.myapp.test/
 - **Session Security**: Token-based session management
 - **Database Isolation**: Complete tenant data separation
 
-## 🚀 Production Considerations
+##  Production Considerations
 
 1. **Queue Configuration**: Use Redis for production queues
 2. **Database Optimization**: Implement connection pooling
@@ -168,7 +168,7 @@ http://appcrates.myapp.test/
 4. **Backup Strategy**: Implement tenant database backups
 5. **SSL Configuration**: Secure all subdomains with SSL
 
-## 📝 API Endpoints
+
 
 ### Root Environment
 - `GET /onboarding` - Onboarding index
@@ -180,16 +180,16 @@ http://appcrates.myapp.test/
 - `GET /onboarding/success` - Success page
 
 
-✅ **Multi-step onboarding flow** with persistent state  
-✅ **Email uniqueness validation** across all tenants  
-✅ **Subdomain reservation** with validation  
-✅ **Background tenant provisioning** via queues  
-✅ **Isolated database multi-tenancy**  
-✅ **Environment separation** (root/landlord/tenant)  
-✅ **Admin interface** for tenant management  
-✅ **Secure session handling** with token-based flow  
-✅ **Comprehensive validation** at each step  
-✅ **Production-ready architecture** with proper error handling  
+ **Multi-step onboarding flow** with persistent state  
+ **Email uniqueness validation** across all tenants  
+ **Subdomain reservation** with validation  
+ **Background tenant provisioning** via queues  
+ **Isolated database multi-tenancy**  
+ **Environment separation** (root/landlord/tenant)  
+ **Admin interface** for tenant management  
+ **Secure session handling** with token-based flow  
+ **Comprehensive validation** at each step  
+ **Production-ready architecture** with proper error handling  
 
 This implementation provides a complete, scalable SaaS onboarding platform ready for production deployment.
 
