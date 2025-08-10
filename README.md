@@ -123,6 +123,7 @@ php artisan queue:work
 4. Tenant will be provisioned automatically
 
 
+
 ## 🔧 Key Components
 
 ### OnboardingController
